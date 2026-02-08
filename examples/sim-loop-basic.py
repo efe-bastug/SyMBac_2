@@ -43,4 +43,13 @@ for step in range(NUM_STEPS):
     if step > 0 and step % REPORT_INTERVAL == 0:
         now = time.time()
         elapsed = now - last_time
-        
+        steps_per_sec = REPORT_INTERVAL / elapsed
+        new_cells = simulator.num_cells - last_cell_count
+        cells_per_sec = new_cells / elapsed
+        print(f"Step {step}/{NUM_STEPS} — {simulator.num_cells} cells | {steps_per_sec:.1f} steps/s | {cells_per_sec:.2f} new cells/s")
+        last_time = now
+        last_cell_count = simulator.num_cells
+
+print(f"Done. Final cell count: {simulator.num_cells}")
+
+
