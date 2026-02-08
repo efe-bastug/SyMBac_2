@@ -51,5 +51,7 @@ for step in range(NUM_STEPS):
         last_cell_count = simulator.num_cells
 
 print(f"Done. Final cell count: {simulator.num_cells}")
+#sample terminal
+
 
 
