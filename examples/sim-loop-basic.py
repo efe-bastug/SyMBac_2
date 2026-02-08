@@ -33,3 +33,9 @@ initial_cell_config = CellConfig(
 )
 #Create and run the simulator
 simulator = Simulator(physics_config, initial_cell_config)
+NUM_STEPS = 1_000
+REPORT_INTERVAL = 100
+
+last_time = time.time()
+last_cell_count = simulator.num_cells
+
