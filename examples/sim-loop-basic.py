@@ -38,4 +38,9 @@ REPORT_INTERVAL = 100
 
 last_time = time.time()
 last_cell_count = simulator.num_cells
-
+for step in range(NUM_STEPS):
+    simulator.step()
+    if step > 0 and step % REPORT_INTERVAL == 0:
+        now = time.time()
+        elapsed = now - last_time
+        
