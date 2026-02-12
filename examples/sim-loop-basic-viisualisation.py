@@ -35,3 +35,5 @@ initial_cell_config = CellConfig(
 
 # Create the simulator 
 simulator = Simulator(physics_config, initial_cell_config)
+# Set up live visualisation 
+sim_viewer_config = SimViewerConfig(SIM_STEPS_PER_DRAW=10)
