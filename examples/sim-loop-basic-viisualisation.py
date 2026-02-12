@@ -38,3 +38,4 @@ simulator = Simulator(physics_config, initial_cell_config)
 # Set up live visualisation 
 sim_viewer_config = SimViewerConfig(SIM_STEPS_PER_DRAW=10)
 live_visualisation = LiveVisualisation(sim_viewer_config)
+simulator.add_post_step_hook(live_visualisation.draw)
